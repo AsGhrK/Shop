@@ -26,12 +26,24 @@ const orderZa = () => {
   setProduct(listAux)
 }
 
+const orderPrecoMenor = () => {
+  const listAux = [...listProduct].sort((a,b) => a.price - b.price);
+  setProduct(listAux)
+}
+
+const orderPrecoMaior = () => {
+ const listAux = [...listProduct].reverse((a,b) => b.price - a.price);
+ setProduct(listAux)
+}
+
   return (
     <>
     <div className={style.filters}>
     <div>
         <button onClick={orderAz}>A - Z</button>
         <button onClick={orderZa}>Z - A</button>
+        <button onClick={orderPrecoMenor}>Menor preço</button>
+        <button onClick={orderPrecoMaior}>Maior preço</button>
     </div>
   </div>
     <main className={style.corpo}>
