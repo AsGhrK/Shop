@@ -2,6 +2,7 @@
 import Image from "next/image"
 import style from "../app/style/page.module.css"
 import { useEffect, useState } from "react"
+import Spinner from "./Spinner";
 
 
 export default function Main() {
@@ -32,8 +33,12 @@ const orderPrecoMenor = () => {
 }
 
 const orderPrecoMaior = () => {
- const listAux = [...listProduct].reverse((a,b) => b.price - a.price);
+ const listAux = [...listProduct].sort((a,b) => b.price - a.price);
  setProduct(listAux)
+}
+
+if(listProduct[0] == null){
+  return <Spinner/>
 }
 
   return (

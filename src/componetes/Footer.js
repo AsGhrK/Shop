@@ -5,7 +5,7 @@ export function Footer() {
     return (
 
         <div className={style.body}>
-            <header className={style.headar}>
+            <header className={style.footer}>
                 <nav className={style.nav}>
                     <ul className={style.navul}>
                         <li className={style.navli}> <Image width={50} height={50} src={"https://cdn.iconscout.com/icon/free/png-512/free-instagram-1946323-1646407.png?f=webp&w=256"} /> </li>
