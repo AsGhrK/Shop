@@ -1,5 +1,5 @@
-export default function Product(){
+export default function Product(params){
     return(
-        <p>Id: {params.id}</p>
+        <p>id: {params.id}</p>
     )
 }
