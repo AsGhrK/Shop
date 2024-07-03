@@ -4,6 +4,7 @@ import style from "../app/style/page.module.css"
 import { useEffect, useState } from "react"
 import Spinner from "./Spinner";
 import ErrorFetch from "./ErrorFetch";
+import Link from "next/link";
 
 export default function Main() {
   const [listProduct, setProduct] = useState([]);
@@ -85,6 +86,7 @@ if(isError == true){
             <h3 className={style.preco}>R$: {products.price}</h3>
             <p>{products.description.slice(0, 100) + "..."}</p>
             <p>{products.category}</p>
+            <Link href={"/product/" + products.id}><button>Ver mais</button></Link>
           </div>
         )}
       </main>
